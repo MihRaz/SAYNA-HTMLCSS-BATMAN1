@@ -96,19 +96,26 @@ header {
   .vertical-icons {
     position: fixed;
     top: 50%;
-    right: 30px;
+    right: 50px;
     transform: translateY(-50%); /* propriété permettant de de centrer en verticale de l'écran si combiner avec la position */
   }
   
   .vertical-icons a {
     display: block;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
+  .bat-icon {
+    transform: scale(2.5);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .vertical-icons img {
     width: 30px;
   }
-  
+
   .down-header {
     position: absolute;
     right: 50%;
