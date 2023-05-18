@@ -1,0 +1,116 @@
+body {
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 5px solid #c1c1c1;
+}
+
+header {
+    padding: 10px;
+  }
+
+.header-background {
+    background-image: url("../Illustrations/Bathome1.png");
+    background-size: cover;
+    width: 100%;
+    height: 901px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+  .header-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-icon img {
+    width: 100px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  
+  .menu-home {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .menu-home:hover .menu-dropdown,
+  .menu-home:focus .menu-dropdown {
+    display: block;
+    padding: 10px;
+    margin: 0px 20px;
+  }
+  
+  .header-content {
+    text-align: center;
+    margin-top: 40px;
+    margin: 80px;
+    padding: 220px 100px;
+  }
+
+  .intro {
+    font-size: 24px;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #c1c1c1;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+  
+  .vertical-icons {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%); /* propriété permettant de de centrer en verticale de l'écran si combiner avec la position */
+  }
+  
+  .vertical-icons a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .vertical-icons img {
+    width: 30px;
+  }
+  
+  .down-header {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%)
+  }
