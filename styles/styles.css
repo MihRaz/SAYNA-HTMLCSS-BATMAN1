@@ -1,14 +1,21 @@
 body {
     background-color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 5px solid #c1c1c1;
+}
+
+
+.border-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 5px solid rgba(104, 102, 102, 0.452);
+  pointer-events: none;
+  z-index: 1;
 }
 
 header {
-    padding: 10px;
+    padding: 20px;
   }
 
 .header-background {
@@ -20,6 +27,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
   .header-container {
@@ -28,18 +36,20 @@ header {
   }
   
   .home-icon img {
-    width: 100px;
+    width: 120px;
+    height: 50px;
     position: absolute;
-    top: 50px;
-    left: 40px;
+    top: 70px;
+    left: 100px;
   }
   
   .menu-home {
     position: absolute;
-    top: 50px;
-    right: 40px;
+    top: 100px;
+    right: 100px;
     size: 30px;
-    background-color: black;
+    transform: translateX(20px);
+    transform: translateY(-40px);
   }
   
   .menu-button {
@@ -47,14 +57,17 @@ header {
     border: none;
     cursor: pointer;
     color: #fdfcfc;
-    font-weight: bold;
+    font-family: "Rajdahi-Medium", sans-serif;
     font-size: 20px;
+    background-image: linear-gradient(to left, #eddbef67,#19587d67);
+    width: 90px;
+    height: 50px;
   }
-  
+
   .menu-dropdown {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 90%;
     right: 0;
     background-color: #f1f1f1;
     padding: 10px;
@@ -62,14 +75,32 @@ header {
     margin: 0;
     white-space: nowrap;
   }
-  
-  .menu-home:hover .menu-dropdown,
-  .menu-home:focus .menu-dropdown {
-    display: block;
-    padding: 10px;
-    margin: 0px 20px;
+
+  .menu-dropdown li a {
+    font-weight: none;
+    text-decoration: none;
   }
   
+  .menu-home:hover {
+    background-image: linear-gradient(to left, #eddbef,#19587d);
+  } 
+
+  .menu-home:hover .menu-dropdown,
+  .menu-home:focus .menu-dropdown,
+  .menu-home:active .menu-dropdown {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-right: 50px;
+  }
+  
+  .menu-dropdown li a:hover,
+  .menu-dropdown li a:focus,
+  .menu-dropdown li a:active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   .header-content {
     text-align: center;
     margin-top: 40px;
@@ -77,41 +108,56 @@ header {
     padding: 220px 100px;
   }
 
-  .intro {
-    font-size: 24px;
-  }
+ .intro {
+  font-family: "space grotesk regular", sans-serif ;
+  font-size: 18px;
+  color: #FFFFFF;
+ }
 
-  .navigation-buttons {
+  .header-buttons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    font-family: "rajdhani", sans-serif;
+    font-size: 20px;
   }
-  
+
   .button {
     display: inline-block;
-    background-color: #c1c1c1;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: large;
     color: #fff;
     padding: 10px 20px;
-    margin: 0 5px;
     text-decoration: none;
+    background-image: linear-gradient(to left, #eddbef67,#19587d67);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
   }
-  
+
+  .button:hover {
+    background-image: linear-gradient(to left, #EDDBEF,#19587D);
+    opacity: 1;
+  }
+
   .vertical-icons {
     position: fixed;
     top: 50%;
-    right: 50px;
+    right: 70px;
     transform: translateY(-50%); /* propriété permettant de de centrer en verticale de l'écran si combiner avec la position */
   }
   
   .vertical-icons a {
     display: block;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    transform: scale(1.2);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transform: scale(0.8);
   }
   
   .bat-icon {
-    transform: scale(3.5);
+    transform: scale(3.0);
     margin-top: 30px;
     margin-bottom: 30px;
   }
