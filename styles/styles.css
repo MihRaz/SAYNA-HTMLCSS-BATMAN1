@@ -4,6 +4,8 @@ html {
 
 body {
     background-color: black;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 header {
@@ -14,15 +16,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin: 10px;
+    margin: auto;
   }
 
 .header-background {
     background-image: url("../Illustrations/Bathome1.png"); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 100%;
-    z-index: 0;
 }
 
 .home-icon {
@@ -183,24 +183,74 @@ header {
 
   section {
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 50px;
   }
 
   .section-container {
-    justify-content: space-between;
-    align-items: center;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: "rajdhani medium", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #FFFFFF;
+  }
+
+.section-content {
     padding: 0;
-    margin: 5px;
-  }
+    color: #FFFFFF;
+}
 
-  .section-content {
-    padding: 20px;
-    left: 50px;
-  }
+.section-content h1,
+.section-content p {
+  margin-left : 130px;
+  margin-top: 40px;
+}
 
-  section .normal-text {
+.zoom-minus {
+  transform: scale(0.6);
+  padding: 0;
+  margin: 0;
+}
+
+section .normal-text {
+  font-family: "space grotesk regular", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;}
+
+.inline-images {
+  transform: scale(0.9);
+}
+
+.inline-images ul li {
+  display: inline-block;
+}
+
+.image-zoom {
+  transition: 0.3s;
+}
+
+.image-zoom:hover {
+  transform: scale(1.1);
+}
+
+figcaption {
   font-family: "space grotesk regular", sans-serif;
   font-size: 18px;
   color: #FFFFFF;
-  }
+  text-decoration-line: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover figcaption,
+a:focus figcaption {
+  font-family: "space grotesk regular", sans-serif;
+  text-decoration: underline;
+  color: #FFFF00;
+}
 
