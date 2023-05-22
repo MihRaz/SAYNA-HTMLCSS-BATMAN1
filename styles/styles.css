@@ -3,37 +3,43 @@ html {
 }
 
 body {
-    background-color: black;
-    margin-right: 0;
-    margin-left: 0;
+  background-image: url("../Illustrations/Bathome1.png");
+  background-clip: border-box;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin: 132px 102px;
+  border: 3px solid #bcbbbd5e;
 }
 
-header {
-  padding: 20px ;
+section {
+  position: relative;
 }
 
-.header-container {
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: auto;
-  }
+header,
+section,
+.vertical-icons {
+  opacity : 0;
+  animation: fade-in 2s ease-in forwards;
+}
 
-.header-background {
-    background-image: url("../Illustrations/Bathome1.png"); 
-    background-size: cover;
-    background-repeat: no-repeat;
+@keyframes fade-in {
+  from {opacity: O;
+        transform: translateX(-100%);}
+  to {opacity: 1;
+    transform: translateX(0);}
+}
+
+.header-top {
+  margin-top: -90px;
 }
 
 .home-icon {
     border-color: none;
     width: 120px;
     height: 50px;
+    padding: 40px 10px 10px 10px;
     cursor: pointer;
-    position: absolute;
-    top: 60px;
-    left: 90px;
-    padding: 10px;
 }
 
 .home-icon:hover {
@@ -41,12 +47,8 @@ header {
   }
   
 .menu-home {
-    position: absolute;
-    top: 100px;
-    right: 100px;
     size: 30px;
-    transform: translateX(20px);
-    transform: translateY(-40px);
+    float:right;
   }
   
   .menu-button {
@@ -55,22 +57,17 @@ header {
     cursor: pointer;
     color: #fdfcfc;
     font-family: "rajdhani medium", sans-serif;
-    font-weight: bold;
     font-size: 20px;
-    background-image: linear-gradient(to left, #eddbef67,#19587d67);
+    background-image: linear-gradient(to left, #19587d69,#19587d85);
     width: 90px;
     height: 50px;
   }
 
   .menu-dropdown {
     display: none;
-    position: absolute;
-    top: 90%;
-    right: 0;
-    background-color: #f1f1f1;
-    padding: 10px;
-    list-style: none;
-    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
     white-space: nowrap;
   }
 
@@ -79,19 +76,26 @@ header {
     font-weight: none;
     text-decoration: none;
     font-family: "rajdhani medium", sans-serif;
-  }
-  
-  .menu-home:hover {
-    background-image: linear-gradient(to left, #eddbef,#19587d);
   } 
+
+  .menu-home:hover {
+    background-image: none;
+  }
+
+  .menu-button:hover,
+  .menu-button:focus {
+    background-image: linear-gradient(to right, #19587d69,#19587d85);
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
   .menu-home:hover .menu-dropdown,
   .menu-home:focus .menu-dropdown,
   .menu-home:active .menu-dropdown {
     display: block;
-    padding: 10px 10px 10px 10px;
+    margin-left: -80px;
     margin-top: 0;
-    margin-right: 50px;
+    background-image: linear-gradient(to left, #eddbef62,#eddbef);
   }
   
   .menu-dropdown li a:hover,
@@ -101,55 +105,14 @@ header {
     text-decoration: underline;
   }
 
-  .header-content {
-    text-align: center;
-    margin-top: 40px;
-    margin: 80px;
-    padding: 220px 100px;
-  }
-
- .intro {
-  font-family: "space grotesk regular", sans-serif ;
-  font-size: 18px;
-  color: #FFFFFF;
- }
-
-  .header-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-family: "rajdhani", sans-serif;
-    font-size: 20px;
-  }
-
-  .button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: large;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-image: linear-gradient(to left, #eddbef67,#19587d67);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s ease-in-out;
-  }
-
-  .button:hover {
-    background-image: linear-gradient(to left, #EDDBEF,#19587D);
-    opacity: 1;
-  }
-
   .vertical-icons {
     position: fixed;
-    top: 50%;
-    right: 70px;
-    transform: translateY(-50%); /* propriété permettant de de centrer en verticale de l'écran si combinée avec la position */
-    z-index: 2;
+    transform: translateY(20%);
+    right: 0;
+    left: 91%;
+    z-index: 1;
   }
-  
+
   .vertical-icons a .social-network {
     display: block;
     margin-top: 15px;
@@ -175,20 +138,70 @@ header {
     width: 30px;
   }
 
+  .header-container {
+    text-align: center;
+    margin-top: 250px;
+  }
+
+  .header-content {
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+ .intro {
+  font-family: "space grotesk regular", sans-serif ;
+  font-size: 18px;
+  color: #FFFFFF;
+ }
+
+  .header-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 250px;
+  }
+
+  .button {
+    background-image: linear-gradient(to left, #eddbef67,#19587d67);
+    background-size: 100% 100%;
+    padding: 10px 10px ;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: inline-block;
+    font-family: "rajdhani medium", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+  }
+
+  .button:hover {
+    background-image: linear-gradient(to left, #EDDBEF,#19587D);
+    opacity: 1;
+  }
+
   .down-header {
     position: absolute;
     right: 50%;
-    transform: translateX(50%)
+    transform: translateX(50%);
   }
 
+  header {
+    padding-bottom: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin: 0;
+  }
+  
   section {
-    padding: 20px;
-    margin-top: 40px;
-    margin-left: 50px;
+    margin: 50px 0 0 0;
+    padding: 0;
   }
 
   .section-container {
-    margin: auto;
+    margin: 0;
+    padding: 0;
   }
 
   h1 {
@@ -196,61 +209,143 @@ header {
     font-weight: bold;
     font-size: 36px;
     color: #FFFFFF;
+    
   }
 
 .section-content {
+    margin: 0;
     padding: 0;
     color: #FFFFFF;
+
 }
 
 .section-content h1,
 .section-content p {
-  margin-left : 130px;
+  margin-left : 120px;
   margin-top: 40px;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
-.zoom-minus {
-  transform: scale(0.6);
-  padding: 0;
-  margin: 0;
-}
-
-section .normal-text {
+.normal-text {
   font-family: "space grotesk regular", sans-serif;
   font-size: 18px;
   color: #FFFFFF;}
 
 .inline-images {
-  transform: scale(0.9);
+    text-align: center;
+    margin: 0;
 }
 
 .inline-images ul li {
-  display: inline-block;
+    display: inline-block;
+    transform: scale(0.8);
 }
-
+  
 .image-zoom {
-  transition: 0.3s;
+    transition: 0.3s;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+  
+  .image-zoom:hover {
+    transform: scale(0.9);
+  }
+  
+  figcaption {
+    font-family: "space grotesk regular", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration-line: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover figcaption,
+  a:focus figcaption {
+    font-family: "space grotesk regular", sans-serif;
+    text-decoration: underline;
+    color: #FFFF00;
+  }
+  
+  .justice-league {
+    margin-top: 20px;
+    margin-left: -150px;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  #MULTIMEDIA {
+    margin-right: -30px;
+  }
+
+  h2 {
+    font-family: "space grotesk regular", sans-serif;
+    font-size: 12px;
+  }
+  
+  .section-multimedia {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    transform: scale(0.8);
+  }
+  
+  .synopsis {
+    font-family: "space grotesk", sans-serif;
+    color: #FFFFFF;
+  }
+
+  .previous-next {
+    transform: translateY(-80px);
+    transition: 0.3s;
+    }
+
+    .previous-next:hover {
+      border: 1px solid #FFFF00;
+    }
+
+.bat-synopsis {
+  margin-left: 0;
+  margin-right: 0;
+  transform: scale(0.8);
+  width: 800px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.image-zoom:hover {
-  transform: scale(1.1);
+.bat-synopsis:hover {
+  transform: scale(0.85);
 }
 
-figcaption {
-  font-family: "space grotesk regular", sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-  text-decoration-line: none;
-}
+  .trailer-image img {
+      float:left;
+      width: 165px;
+      height: 240px;
+      margin-bottom: 0;
+  }
+    
+  .batman-begins {
+    margin-left: 170px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
+    background-image: linear-gradient(to right, #c4c4c496 20%, black);
+  }
 
-a {
-  text-decoration: none;
-}
-
-a:hover figcaption,
-a:focus figcaption {
-  font-family: "space grotesk regular", sans-serif;
-  text-decoration: underline;
-  color: #FFFF00;
-}
+  .batman-begins > p {
+    margin: 20px 5px 20px 5px;
+  }
+  
+  .section-multimedia ul li {
+    display: inline-block;
+  }
 
