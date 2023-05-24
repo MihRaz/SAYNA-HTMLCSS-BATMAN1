@@ -16,6 +16,7 @@ section {
   position: relative;
 }
 
+/* Animation d'opacité et de défilement de la gauche vers la droite */
 header,
 section,
 .vertical-icons {
@@ -23,15 +24,17 @@ section,
   animation: fade-in 2s ease-in forwards;
 }
 
-@keyframes fade-in {
-  from {opacity: O;
-        transform: translateX(-100%);}
-  to {opacity: 1;
-    transform: translateX(0);}
+    @keyframes fade-in {
+      from {opacity: O;
+            transform: translateX(-100%);}
+          to {opacity: 1;
+              transform: translateX(0);}
 }
 
 .header-top {
-  margin-top: -90px;
+  margin-top: -150px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .home-icon {
@@ -56,9 +59,9 @@ section,
     border: none;
     cursor: pointer;
     color: #fdfcfc;
-    font-family: "rajdhani medium", sans-serif;
+    font-family: 'rajdhani';
     font-size: 20px;
-    background-image: linear-gradient(to left, #19587d69,#19587d85);
+    background-image: linear-gradient(80deg, #19587d69,#19587d85);
     width: 90px;
     height: 50px;
   }
@@ -67,15 +70,16 @@ section,
     display: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 10px;
+    padding-right: 0;
     white-space: nowrap;
+    margin-right: 40px;
   }
 
   .menu-dropdown li a {
     font-size: 16px;
     font-weight: none;
     text-decoration: none;
-    font-family: "rajdhani medium", sans-serif;
+    font-family: "rajdhani";
   } 
 
   .menu-home:hover {
@@ -107,16 +111,15 @@ section,
 
   .vertical-icons {
     position: fixed;
-    transform: translateY(20%);
     right: 0;
     left: 91%;
     z-index: 1;
   }
 
   .vertical-icons a .social-network {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
     transform: scale(0.8);
   }
 
@@ -126,8 +129,8 @@ section,
 
   .bat-icon {
     transform: scale(3.0);
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .bat-icon:hover {
@@ -155,13 +158,12 @@ section,
  }
 
   .header-buttons {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     margin-bottom: 250px;
   }
 
   .button {
-    background-image: linear-gradient(to left, #eddbef67,#19587d67);
+    background: linear-gradient(80deg, #eddbef67,#19587d67);
     background-size: 100% 100%;
     padding: 10px 10px ;
     margin-left: 40px;
@@ -176,7 +178,7 @@ section,
   }
 
   .button:hover {
-    background-image: linear-gradient(to left, #EDDBEF,#19587D);
+    background-image: linear-gradient(80deg, #eddbefbd,#19587da4);
     opacity: 1;
   }
 
@@ -269,15 +271,44 @@ section,
     text-decoration: underline;
     color: #FFFF00;
   }
+
+  /* Mise en forme de l'image à coté du titre némésis*/
+  .nemesis {
+    display: flex;
+    width: 350px;
+    padding-top: 40px;
+    position: relative;
+  }
+    .nemesis img {
+      width: 150px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   
+  /* Ajout de l'image entre la section Némésis et Alliés */
+    .alliés {
+      display: flex;
+      position: relative;
+      margin-right: -100px;
+    }
+    .alliés img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+  /* Mise en page de la section Justice League */
   .justice-league {
     margin-top: 20px;
+    width: 122%;
     margin-left: -150px;
-    width: 100%;
     height: auto;
     z-index: 0;
   }
 
+/* Mise en forme de la section multimédia */
   #MULTIMEDIA {
     margin-right: -30px;
   }
@@ -286,7 +317,8 @@ section,
     font-family: "space grotesk regular", sans-serif;
     font-size: 12px;
   }
-  
+
+/* Ajout d'une image et de la description */
   .section-multimedia {
     margin-left: 0;
     margin-right: 0;
@@ -311,24 +343,23 @@ section,
 .bat-synopsis {
   margin-left: 0;
   margin-right: 0;
-  transform: scale(0.8);
+  transform: scale(0.7);
   width: 800px;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 10px;
   padding-left: 10px;
-  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .bat-synopsis:hover {
-  transform: scale(0.85);
+  transform: scale(0.75);
 }
 
   .trailer-image img {
       float:left;
       width: 165px;
-      height: 240px;
+      height: 280px;
       margin-bottom: 0;
   }
     
@@ -337,12 +368,16 @@ section,
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     text-align: justify;
-    background-image: linear-gradient(to right, #c4c4c496 20%, black);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(to right,#eddebf60, #19587d5d);
   }
 
   .batman-begins > p {
-    margin: 20px 5px 20px 5px;
+    margin: 20px 10px 20px 10px;
   }
   
   .section-multimedia ul li {
