@@ -5,7 +5,7 @@ html {
 body {
   background-image: url("../Illustrations/Bathome1.png");
   background-clip: border-box;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: black;
   margin: 132px 102px;
@@ -14,6 +14,19 @@ body {
 
 section {
   position: relative;
+}
+/* Les polices */
+@font-face {
+  font-family: 'rajdhani';
+  src: url("../polices/Rajdhani-Medium.ttf");
+}
+@font-face {
+  font-family: 'space grotesk bold';
+  src: url("../polices/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: 'space grotesk regular';
+  src: url("../polices/SpaceGrotesk-Regular.ttf");
 }
 
 /* Animation d'opacité et de défilement de la gauche vers la droite */
@@ -32,26 +45,22 @@ section,
 }
 
 .header-top {
-  margin-top: -150px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+    display: flex;
+    position: relative;
+    top: -100px;
 }
-
-.home-icon {
-    border-color: none;
-    width: 120px;
-    height: 50px;
-    padding: 40px 10px 10px 10px;
-    cursor: pointer;
-}
-
-.home-icon:hover {
-    border: 2px solid #FFFF00;
+  .home-icon {
+    padding: 5px;
+    transition: 0.3s;
   }
+    .home-icon:hover {
+      border: 2px solid yellow;
+    }
   
 .menu-home {
     size: 30px;
-    float:right;
+    display: flex;
+    margin-left: 80%;
   }
   
   .menu-button {
@@ -68,43 +77,35 @@ section,
 
   .menu-dropdown {
     display: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 0;
     white-space: nowrap;
-    margin-right: 40px;
   }
 
   .menu-dropdown li a {
     font-size: 16px;
     font-weight: none;
     text-decoration: none;
-    font-family: "rajdhani";
-  } 
-
-  .menu-home:hover {
-    background-image: none;
+    font-family: "space grotesk regular";
+    color: #C4C4C4;
   }
 
   .menu-button:hover,
   .menu-button:focus {
-    background-image: linear-gradient(to right, #19587d69,#19587d85);
-    font-weight: bold;
+    background-image: linear-gradient(to right, #156492af,#1b638d85);
     text-decoration: underline;
   }
 
   .menu-home:hover .menu-dropdown,
-  .menu-home:focus .menu-dropdown,
-  .menu-home:active .menu-dropdown {
+  .menu-home:focus .menu-dropdown {
     display: block;
-    margin-left: -80px;
-    margin-top: 0;
-    background-image: linear-gradient(to left, #eddbef62,#eddbef);
+    background-color: #0d0e09be;
+    margin-top: 25px;
+    margin-left: -260px;
+    padding: 10px 10px 10px 20px;
+
   }
   
   .menu-dropdown li a:hover,
-  .menu-dropdown li a:focus,
-  .menu-dropdown li a:active {
+  .menu-dropdown li a:focus {
     font-weight: bold;
     text-decoration: underline;
   }
@@ -112,6 +113,7 @@ section,
   .vertical-icons {
     position: fixed;
     right: 0;
+    top: 30%;
     left: 91%;
     z-index: 1;
   }
@@ -218,6 +220,8 @@ section,
     margin: 0;
     padding: 0;
     color: #FFFFFF;
+    margin-right: 70px;
+    text-align: justify;
 
 }
 
@@ -230,7 +234,7 @@ section,
 }
 
 .normal-text {
-  font-family: "space grotesk regular", sans-serif;
+  font-family: "space grotesk regular";
   font-size: 18px;
   color: #FFFFFF;}
 
@@ -291,7 +295,7 @@ section,
     .alliés {
       display: flex;
       position: relative;
-      margin-right: -100px;
+      margin-right: -16%;
     }
     .alliés img {
       position: absolute;
@@ -319,11 +323,19 @@ section,
   }
 
 /* Ajout d'une image et de la description */
+.synopsis-video {
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
   .section-multimedia {
+    position: relative;
+    display: flex;
+    position: relative;
     margin-left: 0;
     margin-right: 0;
-    text-align: center;
-    transform: scale(0.8);
+    justify-content: center;
   }
   
   .synopsis {
@@ -331,40 +343,31 @@ section,
     color: #FFFFFF;
   }
 
-  .previous-next {
-    transform: translateY(-80px);
-    transition: 0.3s;
-    }
-
-    .previous-next:hover {
-      border: 1px solid #FFFF00;
-    }
+  .icon-arrow {
+    margin-top: 13%;
+    margin-bottom: 13%;
+    display: flex;
+  }
 
 .bat-synopsis {
+  display: flex;
   margin-left: 0;
   margin-right: 0;
-  transform: scale(0.7);
-  width: 800px;
+  transform: scale(0.6);
+  width: 90%;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 10px;
-  padding-left: 10px;
   transition: 0.3s ease-in-out;
 }
 
 .bat-synopsis:hover {
-  transform: scale(0.75);
+  transform: scale(0.65);
 }
-
-  .trailer-image img {
-      float:left;
-      width: 165px;
-      height: 280px;
-      margin-bottom: 0;
+  .trailer-image {
+    display: flex;
   }
-    
+
   .batman-begins {
-    margin-left: 170px;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -379,8 +382,99 @@ section,
   .batman-begins > p {
     margin: 20px 10px 20px 10px;
   }
+    .batman-begins p:first-child {
+      font-family: "space grotesk bold";
+      letter-spacing: 3px;
+    }
+    .batman-begins p:last-child {
+      font-family: "space grotesk regular";
+    }
+    #batman-title {
+      font-family: "rajdhani";
+      font-size: 24px;
+    }
+    #imdb {
+      font-family: "space grotesk regular";
+    }
   
   .section-multimedia ul li {
     display: inline-block;
   }
 
+/* Bande annonce de Batman begins */
+.trailer-video {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+.empty {
+  height: 120px;
+}
+/* Mise en forme du formulaire */
+
+.form-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  margin-left: -102px;
+  background-image: linear-gradient(to right, rgba(237, 222, 191, 0.288),rgb(25, 88, 125, 0.30)) ;
+}
+
+.formulaire {
+  position: relative;
+  font-family: "space grotesk regular";
+  color: #C4C4C4;
+  margin-left: 30%;
+}
+  .formulaire h2 {
+    font-family: "space grotesk bold";
+    font-size: 32px;
+    color: #fff;
+    margin-left: 20%;
+  }
+
+  select,
+  input,
+  textarea,
+  ::placeholder {
+    font-family: "space grotesk regular";
+    width: 100%;  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #C4C4C4;
+    background-color: inherit;
+    color: #C4C4C4;
+    display: flex;
+  }
+
+  select #newsletter {
+    background-image: inherit;
+  }
+  select option {
+    background-color: inherit;
+  }
+
+/* Message popup */
+/* Apparence générale du popup */
+.popup {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(237, 222, 191, 0.904),rgba(25, 88, 125, 0.904));
+  border: 1px solid blue;
+  display: none;
+}
+
+/* Quand on clique sur le href */
+.popup:target {
+  display: block;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
