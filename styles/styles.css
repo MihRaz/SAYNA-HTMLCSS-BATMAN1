@@ -565,6 +565,7 @@ footer {
 .footer {
     width: 60%;
     margin: auto;
+    transform: scale(0.8);
 }
 
 .origin {
