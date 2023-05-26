@@ -53,8 +53,8 @@ section,
     padding: 5px;
     transition: 0.3s;
   }
-    .home-icon:hover {
-      border: 2px solid yellow;
+    .home-icon img:hover {
+      filter: invert(4%) sepia(96%) saturate(4618%) hue-rotate(346deg) brightness(96%) contrast(111%);
     }
   
 .menu-home {
@@ -126,7 +126,7 @@ section,
   }
 
   .vertical-icons a .social-network:hover {
-    border: 2px solid #FFFF00;
+    filter: invert(4%) sepia(96%) saturate(4618%) hue-rotate(346deg) brightness(96%) contrast(111%);
   }
 
   .bat-icon {
@@ -136,7 +136,7 @@ section,
   }
 
   .bat-icon:hover {
-    border: 1px solid #FFFF00;
+    filter: invert(4%) sepia(96%) saturate(4618%) hue-rotate(346deg) brightness(96%) contrast(111%);
   }
 
   .vertical-icons img {
@@ -313,9 +313,6 @@ section,
   }
 
 /* Mise en forme de la section multimédia */
-  #MULTIMEDIA {
-    margin-right: -30px;
-  }
 
   h2 {
     font-family: "space grotesk regular", sans-serif;
@@ -325,17 +322,16 @@ section,
 /* Ajout d'une image et de la description */
 .synopsis-video {
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0;
+  width: 106%;
 }
 
   .section-multimedia {
     position: relative;
     display: flex;
     position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    justify-content: center;
+    width: 70%;
+    margin: auto;
   }
   
   .synopsis {
@@ -344,9 +340,8 @@ section,
   }
 
   .icon-arrow {
-    margin-top: 13%;
-    margin-bottom: 13%;
     display: flex;
+    align-items: center;
   }
 
 .bat-synopsis {
@@ -463,9 +458,34 @@ select[id="news"] {
     border-bottom: 1px solid #C4C4C4;
     padding-right: 275px;
   }
-form div .form-text {
+
+.form-text {
   font-size: 14px;
 }
+#news {
+  border-bottom: 2px solid #C4C4C4;
+  padding-top: 20px;
+}
+input[type="radio"] {
+  opacity: 0;
+  text-align: center;
+}
+.choice {
+    display: inline-flex;
+    padding: 10px 30px 10px 10px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, rgba(237, 222, 191, 0.3),rgb(25, 88, 125, 0.30));
+    cursor: pointer;
+}
+  .choice label {
+      font-size: 14px;
+  }
+    .choice:hover,
+    .choice:focus {
+      background-image: linear-gradient(to right, rgba(237, 222, 191, 0.4),rgb(25, 88, 125, 0.50));
+    }
 
 textarea {
   background-color: inherit;
@@ -482,33 +502,12 @@ textarea {
     font-family: "space grotesk regular";
     font-size: 20px;
     margin-bottom: 30px;
+    cursor: pointer;
   }
 
   option {
     background-color: inherit;
   }
-  
-/* Message popup */
-/* Apparence générale du popup */
-.popup {
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: linear-gradient(to right, rgba(237, 222, 191, 0.904),rgba(25, 88, 125, 0.904));
-  display: none;
-}
-
-/* Quand on clique sur le href */
-.popup:target {
-  display: block;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
 /* Les éléments du footer*/
 footer {
@@ -579,9 +578,11 @@ footer {
   font-family: "space grotesk regular";
   color: #c4c4c4c2;
 }
+
 .wb {
   display: flex;
   float: left;
+  padding-right: 5px;
 }
 .footer-logo {
     justify-content: center;
@@ -593,10 +594,13 @@ footer {
 #social {
     margin-left: 40px;
 }
-
+.merge {
+  transform: scale(0.8);
+}
 .merge:hover {
-    transform: scale(1.1);
+  filter: invert(4%) sepia(96%) saturate(4618%) hue-rotate(346deg) brightness(96%) contrast(111%);
+  transform: scale(0.9);
 }
 #social:hover {
-    border: 1px solid yellow;
+  filter: invert(4%) sepia(96%) saturate(4618%) hue-rotate(346deg) brightness(96%) contrast(111%);
 }

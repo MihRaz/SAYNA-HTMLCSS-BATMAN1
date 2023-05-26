@@ -188,13 +188,13 @@
                 <option value="1 par six mois">Une fois tous les six mois</option>
             </select>
           </div>
-            <label for="news"><br></label>
-            <select name="news" id="news" multiple>
-                <option value="Hidden" disabled>Souhaitez vous recevoir des news</option>
-                <button><option value="film">Des films</option></button>
-                <button><option value="comic">Des comics</option></button>
-                <button><option value="tout">De tout</option></button>
-            </select>
+            <p class="form-text" id="news">Souhaitez vous recevoir des news</p>
+            <div class="choice"><input type="radio" id="film">
+                <label for="film">Des films</label></div>
+            <div class="choice"><input type="radio" id="comic">
+                <label for="comic">Des comics</label></div>
+            <div class="choice"><input type="radio" id="tout">
+                <label for="tout">De tout</label></div>
             <div><br></div>
           <div>
               <label for="message">MESSAGE</label>
@@ -222,7 +222,7 @@
 
 <!--La fin de page -->
   <div class="footer">
-        <div>
+        <div class="origin">
             <img class="wb" src="Logos/icon_WB.png" alt="">
             <p>Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
         </div>
