@@ -154,9 +154,9 @@ section,
   }
 
  .intro {
-  font-family: "space grotesk regular", sans-serif ;
+  font-family: "space grotesk regular";
   font-size: 18px;
-  color: #FFFFFF;
+  color: #fff;
  }
 
   .header-buttons {
@@ -171,7 +171,7 @@ section,
     margin-left: 40px;
     margin-right: 40px;
     display: inline-block;
-    font-family: "rajdhani medium", sans-serif;
+    font-family: "rajdhani";
     font-size: 20px;
     color: #fff;
     text-decoration: none;
@@ -209,7 +209,7 @@ section,
   }
 
   h1 {
-    font-family: "rajdhani medium", sans-serif;
+    font-family: "rajdhani";
     font-weight: bold;
     font-size: 36px;
     color: #FFFFFF;
@@ -219,7 +219,7 @@ section,
 .section-content {
     margin: 0;
     padding: 0;
-    color: #FFFFFF;
+    color: #C4C4C4;
     margin-right: 70px;
     text-align: justify;
 
@@ -236,7 +236,7 @@ section,
 .normal-text {
   font-family: "space grotesk regular";
   font-size: 18px;
-  color: #FFFFFF;}
+  color: #C4C4C4;}
 
 .inline-images {
     text-align: center;
@@ -411,22 +411,24 @@ section,
 .empty {
   height: 120px;
 }
+
 /* Mise en forme du formulaire */
 
 .form-container {
   display: flex;
-  position: absolute;
   width: 100%;
-  margin-left: -102px;
   background-image: linear-gradient(to right, rgba(237, 222, 191, 0.288),rgb(25, 88, 125, 0.30)) ;
+  margin: 0 -102px 0;
+  padding-right: 18%;
 }
 
 .formulaire {
   position: relative;
   font-family: "space grotesk regular";
   color: #C4C4C4;
-  margin-left: 30%;
+  margin-left: 35%;
 }
+
   .formulaire h2 {
     font-family: "space grotesk bold";
     font-size: 32px;
@@ -434,28 +436,58 @@ section,
     margin-left: 20%;
   }
 
+  label {
+    font-family: "space grotesk regular";
+    font-size: 20px;
+  }
   select,
-  input,
-  textarea,
   ::placeholder {
     font-family: "space grotesk regular";
-    width: 100%;  
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #C4C4C4;
+    border-bottom: 2px solid #c4c4c4ab;
     background-color: inherit;
     color: #C4C4C4;
     display: flex;
   }
 
-  select #newsletter {
-    background-image: inherit;
-  }
-  select option {
+select[id="news"] {
+    padding-bottom: 20px;
+    padding-right: 270px;
+}
+
+  input[type="email"] {
     background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    padding-right: 275px;
+  }
+form div .form-text {
+  font-size: 14px;
+}
+
+textarea {
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+  input[type="submit"] {
+    margin-left: 40%;
+    background-image: linear-gradient(to right, rgb(237, 222, 191,0.4), rgba(226, 37, 37, 0.952));
+    padding: 10px 20px 10px 20px ;
+    border: none;
+    border-radius: 5px;
+    font-family: "space grotesk regular";
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 
+  option {
+    background-color: inherit;
+  }
+  
 /* Message popup */
 /* Apparence générale du popup */
 .popup {
@@ -466,7 +498,6 @@ section,
   left: 0;
   right: 0;
   background-image: linear-gradient(to right, rgba(237, 222, 191, 0.904),rgba(25, 88, 125, 0.904));
-  border: 1px solid blue;
   display: none;
 }
 
@@ -477,4 +508,95 @@ section,
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Les éléments du footer*/
+footer {
+  position: relative;
+}
+
+.footer-container {
+     position: relative;
+     display: flex;
+     justify-content: center;
+}
+
+.quotation-container {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+/* Les guillemets*/
+    .quote1,
+    .quote2 {
+        display: flex;
+        transform: scale(0.8);
+    }
+    .quote1 {
+        float: left; 
+    }
+    .quote2 {
+      float: right;
+    }
+
+/*La citation*/
+.quotation {
+    color: white;
+    font-family: "space grotesk regular";
+    padding: 50px 20px 10px 20px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.quotation p:first-child {
+    font-size: 16px;
+}
+.quotation p:last-child {
+    font-size: 12px;
+    color: #c4c4c4;
+}
+
+/* La fin de page */
+.footer {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer div {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.footer p {
+  display: flex;
+  font-size: 10px;
+  font-family: "space grotesk regular";
+  color: #c4c4c4c2;
+}
+.wb {
+  display: flex;
+  float: left;
+}
+.footer-logo {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+}
+#social {
+    margin-left: 40px;
+}
+
+.merge:hover {
+    transform: scale(1.1);
+}
+#social:hover {
+    border: 1px solid yellow;
 }

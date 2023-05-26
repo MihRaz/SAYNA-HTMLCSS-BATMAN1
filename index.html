@@ -11,9 +11,9 @@
 <body class="body">
   <div class="vertical-icons">
     <a href="#top"><img src="Logos/logo_bat_flèche.png" alt="flèche batman" title="Haut de page" class="bat-icon"></a>
-    <a href="lien1.html"><img src="Logos/icon_facebook.png" title="Facebook" alt="Icône facebook" class="social-network"></a> 
-    <a href="lien2.html"><img src="Logos/icon_ig.png" title="Instagram" alt="Icône instagram" class="social-network"></a>
-    <a href="lien3.html"><img src="Logos/icon_tw.png" title="Twitter" alt="Icône twitter" class="social-network"></a>
+    <a href=""><img src="Logos/icon_facebook.png" title="Facebook" alt="Icône facebook" class="social-network"></a> 
+    <a href=""><img src="Logos/icon_ig.png" title="Instagram" alt="Icône instagram" class="social-network"></a>
+    <a href=""><img src="Logos/icon_tw.png" title="Twitter" alt="Icône twitter" class="social-network"></a>
     <a href="#formulaire"><img src="Logos/logo_bat_flèche_2.png" alt="flèche batman" title="Bas de page" class="bat-icon"></a>
   </div>
   <header id="top">
@@ -160,7 +160,12 @@
       </div>
     </div>
   </section>
+
+  <!--Dans le footer,nous allons mettre le formulaire-->
+
+<footer>
   <div class="empty"></div>
+  <!--Le formulaire-->
   <div class="form-container">
     <div class="formulaire" id="formulaire">
       <br>
@@ -168,12 +173,12 @@
       <form action="#" method="post">
           <div>
             <label for="mail">ADRESSE EMAIL</label>
-            <p><input type="email" name="email" id="mail"></p>
+            <p><input type="email" name="email" id="mail" placeholder="Adresse email"></p>
           </div>
           <div>
             <label for="newsletter">NEWSLETTER</label>
-            <p>En cochant cette case vous acceptez de recevoir l’actualité concernant les <br>
-              aventures de Batman : <input type="checkbox"></p>
+            <p class="form-text">En cochant cette case vous acceptez de recevoir l’actualité concernant les <br>
+              aventures de Batman : <input type="checkbox" required></p>
             <select name="fréquence" id="newsletter">
                 <option value="#">Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</option>
                 <option value="1 par semaine">Une fois par semaine</option>
@@ -183,21 +188,55 @@
                 <option value="1 par six mois">Une fois tous les six mois</option>
             </select>
           </div>
+            <label for="news"><br></label>
             <select name="news" id="news" multiple>
-                <option value="Hidden" disabled> Souhaitez vous recevoir des news</option>
+                <option value="Hidden" disabled>Souhaitez vous recevoir des news</option>
                 <button><option value="film">Des films</option></button>
                 <button><option value="comic">Des comics</option></button>
                 <button><option value="tout">De tout</option></button>
             </select>
+            <div><br></div>
           <div>
               <label for="message">MESSAGE</label>
-              <p><textarea name="message" id="message" cols="61" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea></p>
+              <p><textarea name="message" id="message" cols="67" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea></p>
           </div>
           <div id="popup" class="popup">
             <span class="popup-message">Message reçu !</span>
           </div>
-          <a href="#popup"><button>CONFIRMER</button></a>
+          <input type="submit" value="CONFIRMER">
       </form>
-</div></div>
+    </div>
+  </div>
+
+<!--Dernière partie de la page-->
+  <div class="quotation-container">
+        <img class="quote1" src="Logos/icon_guillemets_1.png" alt="">
+        <div class="quotation">
+            <p>La seule façon raisonnable de vivre en ce bas monde,<br>
+              c'est en dehors des règles.</p>
+            <p>The Dark Knight : Le Chevalier Noir -<br>
+              Le Joker à Batman (2008)</p>
+        </div>
+        <img class="quote2" src="Logos/icon_guillemets_2.png" alt="">
+  </div>
+
+<!--La fin de page -->
+  <div class="footer">
+        <div>
+            <img class="wb" src="Logos/icon_WB.png" alt="">
+            <p>Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
+        </div>
+        <div class="footer-logo">
+          <a href="#top"><div class="merge">
+            <img src="Logos/logo_sayna_white.png" alt="">
+            <img src="Logos/icon_x.png" alt="">
+            <img src="Logos/icon_DC.png" alt="">
+          </div></a>
+            <a href=""><img id="social" src="Logos/icon_facebook.png" alt=""></a>
+            <a href=""><img id="social" src="Logos/icon_ig.png" alt=""></a>
+            <a href=""><img id="social" src="Logos/icon_tw.png" alt=""></a>
+        </div>
+  </div>
+</footer>
 </body>
 </html>
