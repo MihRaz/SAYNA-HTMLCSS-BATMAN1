@@ -465,6 +465,7 @@ select[id="news"] {
 #news {
   border-bottom: 2px solid #C4C4C4;
   padding-top: 20px;
+  margin-right: 10px;
 }
 input[type="radio"] {
   opacity: 0;
