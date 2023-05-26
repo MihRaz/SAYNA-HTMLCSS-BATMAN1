@@ -565,7 +565,12 @@ footer {
 .footer {
     width: 60%;
     margin: auto;
-    text-align: center;
+}
+
+.origin {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer div {
